@@ -1,8 +1,9 @@
+# TAD Set. Functions Create, check duplicates, union, intersection and Defference
 from algo1 import *
 
-#Ingresa un conjunto
-#Elimina los elemenos repetidos de un conjunto
-#Devuelve un Array que representa el TAD set
+#I: Set
+#Delete repeat elements from set
+#O: An array from TAD set
 def Create_Set(Arreglo):
   
   dup=check_duplicates(Arreglo)
@@ -10,7 +11,7 @@ def Create_Set(Arreglo):
 
     n=len(Arreglo)
 
-    #Busca y vacia elementos repetidos
+    #Search and empty repeat elements
     for i in range(0,n):
       contador1=0
       for j in range(0,n):
@@ -19,13 +20,13 @@ def Create_Set(Arreglo):
           if contador1>1:
             Arreglo[j]=None
 
-    #Cuenta espacios vacios
+    #Counts empty elements
     contador2=0 
     for i in range(0,n):
       if Arreglo[i]==None:
         contador2=contador2+1               
   
-    #Genera un nuevo vector
+    #Generate a new array
     if contador2!=0:
       m=n-contador2
       ArregloNew=Array(m,0)
@@ -40,9 +41,9 @@ def Create_Set(Arreglo):
   else:
     return Arreglo          
 
-#Lee un arreglo  
-#Verifica la existencia de elementos duplicados
-#Devuelve False si no hay repetidos y True si lo hay
+#I: Array  
+#Sarch for repeat elements
+#O: returns true if there is and returns false if not
 def check_duplicates(Arreglo):
   n=len(Arreglo)
   verifica=False
@@ -54,11 +55,12 @@ def check_duplicates(Arreglo):
         if repetidos>1:
           verifica=True
   if verifica==True:
-    print("ERROR: existen duplicados en el arreglo")
+    print("ERROR: duplicate elements exist")
   return verifica            
 
-#Realiza la union de dos vectores sin elementos repetidos
-#Devuelve un vector sin elementos repetidos
+#I: two vectors S and T
+#performs the union of vectors without repeating elements
+#O: return the new vector
 def Union(S,T):
 
   S=Create_Set(S)
@@ -78,8 +80,9 @@ def Union(S,T):
   vectorU=Create_Set(U)
   return (vectorU)    
 
-
-#Lee los Sets y busca la interseccion entre ellos generando un nuevo Set
+#I: two vectors S and T
+#perform the intesection within the two vectors
+#O: return the new set
 def Intersection(S,T):
 
   S=Create_Set(S)
@@ -101,6 +104,7 @@ def Intersection(S,T):
     print("Los vectores 1 y 2 no tienen elementos en común")
     return[None]        
 
+#
 #Lee los conjuntos, los vuelve tipo Set y busca la diferencia entre ellos
 def Difference(S,T):
   
