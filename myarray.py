@@ -1,6 +1,6 @@
-#Ingresa un Array y un element
-#Busca la primera instancia del element
-#Si encuentra el element devuelve la position, sino devuelve None
+#I: Array and element
+#Search for first instance of an element
+#O: returns the position of the element
 def search(Array, element):
   n=len(Array)
   for i in range(0,n):
@@ -9,9 +9,9 @@ def search(Array, element):
   return None    
 
 
-#Ingrea un Array, un element y una position
-#positiona el element el la position ingresada
-#Devuelve el Array modificado, None si no existe la position
+#I: Array, element and position
+#Place the element in the position input
+#O: returns the modified Array
 def insert(Array,element,position):
   n=len(Array)
   if position<0 or position>=n:
@@ -23,9 +23,9 @@ def insert(Array,element,position):
   return position  
 
 
-#Ingresa un Array y un element
-#Busca y elimina la primera instacia del element ingresado
-#Devuelve la position si existe dicho element, de lo contrario devuelve None
+#I: Array and element
+#Search and delete the first instance of element
+#O: returns the position of the element
 def delete(Array,element):
   n=len(Array)
   existe=False
@@ -43,9 +43,9 @@ def delete(Array,element):
     return position
   return None    
 
-#Ingresa un Array
-#Cuenta la cantidad de elements no vacios
-#Devuelve la cantidad de elements no vacios
+#I: Array
+#Counts not empty elements
+#O: return the amount of not empty elements
 def length(Array):
   n=len(Array)
   full=0
