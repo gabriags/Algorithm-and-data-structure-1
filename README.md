@@ -1,8 +1,9 @@
 # Algorithm-and-data-structure-1
 This repository contains my codes from course Algorithm and Data Structure 1
 i work learning some data structure using python, this are:
-- Arrays
-- Binary Trees
+- Set
+- Array
+- Binary Tree
 - Linked List
 
 Also i learned algorithms to sort linked list and different types of queues:
